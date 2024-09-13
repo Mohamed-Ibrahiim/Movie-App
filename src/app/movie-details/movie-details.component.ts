@@ -17,6 +17,7 @@ export class MoviDetailsComponent {
   similarMovies: any;
 constructor(private activatedRoute:ActivatedRoute , private MovieListService :MovieListService){}
 
+
 ngOnInit() {
   const id =this.activatedRoute.snapshot.params['id'];
   this.MovieListService.getMovieDetails(id).subscribe((res: any) => this.moviedetails = res);
