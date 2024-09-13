@@ -19,5 +19,8 @@ export class MovieListComponent {
   this.MovieListService.getMovies().subscribe((res : any) => this.movies = res.results);
   console.log(this.movies);
  }
+ reciveFromChild(id: number) {
+  console.log(id);
+}
 
 }

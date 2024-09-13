@@ -3,7 +3,8 @@
  <div class="row ps-5  parent "  >
         @for(item of movies ; track item.id){
             <div class=" hover px-3 mb-3 " >
-                <app-movie-card [movie]="item" ></app-movie-card>
+                <app-movie-card [movie]="item"(sendToParent)="reciveFromChild($event)"></app-movie-card>
+                
             </div>
     }
     </div>

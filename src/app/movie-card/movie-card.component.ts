@@ -17,7 +17,7 @@ export class MovieCardComponent {
 
 
   @Input() movie:any;
-
+  @Output() sendToParent = new EventEmitter<number>();
   constructor(private routes: Router) {}
 
   handle(id :number){
