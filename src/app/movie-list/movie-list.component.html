@@ -1,1 +1,9 @@
-<p>movie-list works!</p>
+<app-header-home></app-header-home>
+ <h1 class="fw-bold  m-5">Now Playing</h1>
+ <div class="row ps-5  parent "  >
+        @for(item of movies ; track item.id){
+            <div class=" hover px-3 mb-3 " >
+                <app-movie-card [movie]="item" ></app-movie-card>
+            </div>
+    }
+    </div>
