@@ -1,0 +1,20 @@
+img{
+    border-radius: 25px;
+    height: 750px;
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+  .coloryellow{
+    background-color: #fff006;
+}
+.card {
+    border: none;
+  }
+  i{
+    color: rgb(158, 163, 163);
+  }
+  i:hover{
+    color: #fff006;
+  }

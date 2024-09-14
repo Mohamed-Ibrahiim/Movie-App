@@ -1,1 +1,68 @@
-<p>movie-details works!</p>
+<div class="col-10 offset-1 my-5">
+    <div class="row">
+        <div class="col-5">
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + moviedetails.poster_path" class="card-img-top" alt="...">
+        </div>
+        <div class="col-6 ms-4">
+            <div class="row ">
+                <span class="col fs-1 fw-bold">{{moviedetails.title}}</span>
+                <div class="col-2 offset-2">
+                    <i class="btn  icon  fa-solid fa-heart fa-3x mt-2"></i>
+
+                    
+                </div>
+            </div>
+            <div class="ms-3">
+                <div class="row  fs-4 mt-3">{{moviedetails.release_date | date}}</div>
+                <div class="row fs-4 mt-3">{{moviedetails.vote_average}}</div>
+                <div class="row fs-3 mt-3" style=" line-height: 1.3;">{{moviedetails.overview}}</div>
+
+                <div class="my-5">
+                    <span class="coloryellow px-5 p-2 rounded-pill fs-4">{{moviedetails.genres[0].name}}</span>
+                </div>
+                <div class="mt-5  d-flex">
+                    <strong class="fs-5 fw-bold me-5">Duration:</strong> <span
+                        class="fs-5 me-5 ">{{moviedetails.runtime}}
+                        Min.</span>
+                    <strong class="fs-5 fw-bold ms-5 ">Languages:</strong> <span
+                        class="fs-5 mx-5 ">{{moviedetails.spoken_languages[0].name}}.</span>
+                </div>
+                <div class="mt-4 d-flex justify-content-between">
+                    <img src="https://logos-world.net/wp-content/uploads/2023/03/Marvel-Studios-Logo.jpg"
+                        style="width: 300px; height: 150px;" class="img-fluid ">
+                        <img class="mt-5" src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/256/Arrow-Down-icon.png" style="width:80px; height:80px;" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="col-10 offset-1">
+    <h1 class="my-4 fw-bold display-4">Recommendations</h1>
+    <div class="row">
+        @for (item of similarMovies.results; track $index) {
+        <div class="col-2 mb-3 " style="height: 600px; ">
+            <div class="card bg-white  " style="border-radius: 20px; height: 550px; ">
+                <img [src]="'https://image.tmdb.org/t/p/w500/' + item.poster_path" style="border-radius: 20px;"
+                    class="card-img" alt="...">
+                <div class="card-body bg-white" style="background-color: beige;">
+
+                    <h5 class="card-title fw-bold mb-4" style="height: 30px;">{{item.title}}</h5>
+                    <div class=" card-footer border-0 row mt-3 bg-white ">
+                        <span class="col-7 ">{{item.release_date | date }}</span>
+
+                        <i class="btn col-2 icon offset-3 fa-solid fa-heart fa-2xl mt-2"></i>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+
+</div>

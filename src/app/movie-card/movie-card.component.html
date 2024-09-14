@@ -1,1 +1,15 @@
-<p>movie-card works!</p>
+<div class="card bg-white  " style="border-radius: 20px; height: 550px;  ">
+  <button (click)="handle(movie.id)" style="border: none; border-radius: 20px;">
+      <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" style="border-radius: 20px ; "
+          class="card-img-top" alt="...">
+  </button>
+  <div class="card-body bg-white" style="background-color: beige;">
+      <h5 class="card-title fw-bold  " style="height: 30px;">{{movie.title}}</h5>
+      <div class=" card-footer border-0 row mt-3 bg-white ">
+          <span class="col-10 ">{{movie.release_date |date}}</span>
+          <div class="col-2 text-end">
+              <i class="fa-solid fa-heart"></i>
+          </div>
+      </div>
+  </div>
+</div>
