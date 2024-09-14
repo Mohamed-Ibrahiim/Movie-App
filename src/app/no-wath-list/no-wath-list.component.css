@@ -1,0 +1,19 @@
+.movies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.no-movies-icon {
+    font-size: 400px;
+    color: #ccc;
+}
+.button {
+    background-color: #f5e50f;
+    transition:  all 0.3s ease;
+}
+.button:hover {
+    transform: scale(1.1);
+}

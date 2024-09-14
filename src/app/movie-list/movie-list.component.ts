@@ -13,14 +13,15 @@ import { HeaderHomeComponent } from "../header-home/header-home.component";
 export class MovieListComponent {
   starConfig: any;
   movies: any;
- constructor( private MovieListService:MovieListService  ){}
+ constructor( private MovieListService:MovieListService){}
 
  ngOnInit() {
   this.MovieListService.getMovies().subscribe((res : any) => this.movies = res.results);
-  console.log(this.movies);
+  console.log();
  }
  reciveFromChild(id: number) {
-  console.log(id);
-}
+    console.log(id);
+  }
+  
 
 }

@@ -1,5 +1,5 @@
+import { NgbRatingModule ,NgbRatingConfig} from '@ng-bootstrap/ng-bootstrap';
 import { Component, Input } from '@angular/core';
-import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-rate',
@@ -11,8 +11,7 @@ import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap'
 export class RateComponent {
   @Input() rating: any;
   constructor(config: NgbRatingConfig) {
-    config.max = 5;
-    config.readonly = true;
-  }
-
+		config.max = 5;
+		config.readonly = true;
+	}
 }

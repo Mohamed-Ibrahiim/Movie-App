@@ -10,4 +10,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private counterService: CounterService) { }
+  counter: number = 0;
+  ngOnInit(){
+    this.counterService.getCounter().subscribe(counter => {
+      this.counter = counter;
+    });
+
+}
 }

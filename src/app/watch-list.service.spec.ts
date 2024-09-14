@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CounterService } from './counter.service';
+import { WatchListService } from './watch-list.service';
 
-describe('CounterService', () => {
-  let service: CounterService;
+describe('WatchListService', () => {
+  let service: WatchListService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CounterService);
+    service = TestBed.inject(WatchListService);
   });
 
   it('should be created', () => {

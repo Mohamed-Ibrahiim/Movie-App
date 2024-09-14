@@ -7,17 +7,19 @@
             <div class="row ">
                 <span class="col fs-1 fw-bold">{{moviedetails.title}}</span>
                 <div class="col-2 offset-2">
-                    <i class="btn  icon  fa-solid fa-heart fa-3x mt-2"></i>
-
-
+                        <i [class]=" (isHoverd ? 'fa-solid ' : 'fa-regular ')+'fa-heart fs-2 movie-favorite'"
+                            (click)="hoverd()"></i>
                 </div>
             </div>
-            <div class="ms-3">
-                <div class="row  fs-4 mt-3">{{moviedetails.release_date | date}}</div>
-                <app-rate [rating]="moviedetails.vote_average /2"></app-rate>
-                <div class="row fs-3 mt-3" style=" line-height: 1.3;">{{moviedetails.overview}}</div>
+            <div class="">
+                <small class="row ms-1 text-muted fs-5 mt-1">{{moviedetails.release_date | date}}</small>
+                <div class="mt-3">
+                    <app-rate class="  fs-4 mt-3" [rating]="moviedetails.vote_average/2"></app-rate>
+                    <span class=" ms-1 fs-4 mt-3 ms-4">{{moviedetails.vote_count}}</span>
+                </div>
+                <div class="row ms-1 fs-3 mt-3" style=" line-height: 1.3;">{{moviedetails.overview}}</div>
 
-                <div class="my-5">
+                <div class="my-5 ms-1">
                     <span class="coloryellow px-5 p-2 rounded-pill fs-4">{{moviedetails.genres[0].name}}</span>
                 </div>
                 <div class="mt-5  d-flex">
@@ -30,9 +32,7 @@
                 <div class="mt-4 d-flex justify-content-between">
                     <img src="https://logos-world.net/wp-content/uploads/2023/03/Marvel-Studios-Logo.jpg"
                         style="width: 300px; height: 150px;" class="img-fluid ">
-                    <img class="mt-5"
-                        src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/256/Arrow-Down-icon.png"
-                        style="width:80px; height:80px;" alt="">
+                        <img class="mt-5" src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/256/Arrow-Down-icon.png" style="width:80px; height:80px;" alt="">
 
                 </div>
             </div>
@@ -50,14 +50,9 @@
                 <img [src]="'https://image.tmdb.org/t/p/w500/' + item.poster_path" style="border-radius: 20px;"
                     class="card-img" alt="...">
                 <div class="card-body bg-white" style="background-color: beige;">
-
                     <h5 class="card-title fw-bold mb-4" style="height: 30px;">{{item.title}}</h5>
                     <div class=" card-footer border-0 row mt-3 bg-white ">
                         <span class="col-7 ">{{item.release_date | date }}</span>
-
-                        <i class="btn col-2 icon offset-3 fa-solid fa-heart fa-2xl mt-2"></i>
-
-
                     </div>
                 </div>
             </div>
