@@ -2,13 +2,14 @@ import { MovieListService } from './../movie-list.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { RateComponent } from '../rate/rate.component';
 
 
 
 @Component({
   selector: 'app-movi-details',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe,RateComponent],
   templateUrl: './movie-details.component.html',
   styleUrl: './movie-details.component.css'
 })

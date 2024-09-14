@@ -1,1 +1,10 @@
-<p>search-result works!</p>
+<app-header-home></app-header-home>
+<h1 class="fw-bold  m-5">Search Result for: <span class="ms-1 fs-3">{{movieSearchResult.results[1].title}}</span></h1>
+<div class="row ps-5  parent "  >
+       @for(item of movieSearchResult.results ; track item.id){
+           <div class=" hover px-3 mb-3 " >
+             <app-movie-card [movie]="item"></app-movie-card>
+
+           </div>
+   }
+   </div>

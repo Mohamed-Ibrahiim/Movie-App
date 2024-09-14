@@ -9,12 +9,12 @@
                 <div class="col-2 offset-2">
                     <i class="btn  icon  fa-solid fa-heart fa-3x mt-2"></i>
 
-                    
+
                 </div>
             </div>
             <div class="ms-3">
                 <div class="row  fs-4 mt-3">{{moviedetails.release_date | date}}</div>
-                <div class="row fs-4 mt-3">{{moviedetails.vote_average}}</div>
+                <app-rate [rating]="moviedetails.vote_average /2"></app-rate>
                 <div class="row fs-3 mt-3" style=" line-height: 1.3;">{{moviedetails.overview}}</div>
 
                 <div class="my-5">
@@ -30,7 +30,9 @@
                 <div class="mt-4 d-flex justify-content-between">
                     <img src="https://logos-world.net/wp-content/uploads/2023/03/Marvel-Studios-Logo.jpg"
                         style="width: 300px; height: 150px;" class="img-fluid ">
-                        <img class="mt-5" src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/256/Arrow-Down-icon.png" style="width:80px; height:80px;" alt="">
+                    <img class="mt-5"
+                        src="https://icons.iconarchive.com/icons/custom-icon-design/flat-cute-arrows/256/Arrow-Down-icon.png"
+                        style="width:80px; height:80px;" alt="">
 
                 </div>
             </div>
