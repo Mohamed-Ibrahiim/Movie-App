@@ -7,7 +7,7 @@ import { MovieCardComponent } from '../movie-card/movie-card.component';
 @Component({
   selector: 'app-search-result',
   standalone: true,
-  imports: [HeaderHomeComponent,MovieCardComponent],
+  imports: [HeaderHomeComponent, MovieCardComponent],
   templateUrl: './search-result.component.html',
   styleUrl: './search-result.component.css'
 })
@@ -20,7 +20,7 @@ export class SearchResultComponent {
   }
   search(query: string) {
     this.MovieListService.getSearchResult(query);
-    this.router.navigate([`/movie-Search/${ query }`]);
+    this.router.navigate([`/movie-Search/${query}`]);
   }
 
 }

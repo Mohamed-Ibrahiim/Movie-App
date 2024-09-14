@@ -2,13 +2,14 @@ import { DatePipe } from '@angular/common';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { MovieListService } from '../movie-list.service';
+import { RateComponent } from '../rate/rate.component';
 
 
 
 @Component({
   selector: 'app-movie-card',
   standalone: true,
-  imports: [DatePipe ,RouterLink],
+  imports: [DatePipe ,RouterLink,RateComponent],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.css'
 })
