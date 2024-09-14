@@ -56,9 +56,98 @@
                     </div>
                 </div>
             </div>
+            <div class="row d-flex justify-content-center  position-relative">
+
+                @if(item.vote_average * 10 < 60 && item.vote_average *10  > 50){
+                
+                    <div class="progress yellow position-absolute" style="right: 10px; bottom: 75px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                }
+                @else if (item.vote_average * 10 <= 50 && item.vote_average *10  > 20) {
+                    <div class="progress orange position-absolute" style="right: 10px; bottom: 75px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                }@else if (item.vote_average * 10 < 70 && item.vote_average *10  > 60) {
+                    <div class="progress blue position-absolute" style="right: 10px; bottom: 80px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                }@else if(item.vote_average * 10 <= 80 && item.vote_average *10  >= 70) {
+                    <div class="progress green position-absolute" style="right: 10px; bottom: 80px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                      
+                }
+                @else if(item.vote_average * 10 <= 100 && item.vote_average *10  > 80) {
+                    <div class="progress black position-absolute" style="right: 10px; bottom: 80px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                      
+                }@else{
+                    <div class="progress red position-absolute" style="right: 10px; bottom: 80px;">
+                        <span class="progress-left">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                                        <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value position-absolute ">
+                            <span  class=" fw-bold text-white position-relative"style="right: 0px; bottom: 42px;" >
+                                {{floatToIntRound(item.vote_average *10)}}%</span>
+                        </div>
+                      </div>
+                }
+       
+    </div>
         </div>
         }
     </div>
+
 
 
 

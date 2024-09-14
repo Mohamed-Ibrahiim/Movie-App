@@ -50,5 +50,8 @@ ngOnInit() {
     this.MovieListService.removeHovered(this.moviedetails);
     
   }
+  floatToIntRound(num: number): number {
+    return Math.round(num);
+}
 
 }
