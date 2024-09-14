@@ -9,7 +9,7 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
 
 
 export const routes: Routes = [
-    { path: "movies",  
+    { path: "",  
         component: MovieListComponent  ,
         title: "Movies List",
     },
