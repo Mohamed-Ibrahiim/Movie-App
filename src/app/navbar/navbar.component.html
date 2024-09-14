@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+  <nav class="navbar navbar-light coloryellow p-3">
+    <div class="container-fluid">
+      <a routerLink="/movies" class="navbar-brand fw-bold ms-4">Movie App</a>
+      <form class="d-flex">
+        <a routerLink="/" class="btn " ><i class="fa-solid fa-heart margin fa-2xl "></i> {{counter}}</a>
+        <a routerLink="/watch-list" class="btn mt-1 fs-5 fw-bold me-3">WatchList</a>
+      </form>
+    </div>
+  </nav>
