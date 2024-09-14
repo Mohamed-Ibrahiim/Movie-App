@@ -1,0 +1,24 @@
+.icon:hover{
+    color: #eedf14;
+}
+.card {
+    border: none;
+  }
+
+  i{
+    color: rgb(158, 163, 163);
+  }
+  i:hover{
+    color: #eedf14;
+  }
+  .parent{
+    width: 100%;
+}
+.hover{
+    width: 350px;
+    height: 650px;
+    transition:  all 0.3s ease;
+}
+.hover:hover{
+    transform: scale(1.08);
+}
